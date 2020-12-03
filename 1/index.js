@@ -4,9 +4,7 @@ let file = fs.readFile('input', 'utf8', (err, data) => {
   if (err) {console.log(err)}
   const numbers = data.split('\n').map(str => parseInt(str))
 
-  const answerA = numbers.filter(x => {
-    return (numbers.some(y => x + y === 2020))
-  })
+  const answerA = numbers.filter(x => numbers.some(y => x + y === 2020))
   
   const answerB = numbers.filter(x => {
     return numbers.some(y => {
